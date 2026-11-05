@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Smart Eco Compost</title>
+    <!-- Memanggil file CSS kita -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Memanggil library FontAwesome untuk Ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <!-- SIDEBAR KIRI -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-seedling"></i></div>
+                <div>
+                    <h2>SMART ECO</h2>
+                    <span>COMPOST IOT</span>
+                </div>
+            </div>
+            <p class="menu-label">MENU UTAMA</p>
+            <ul class="menu">
+                <li class="active"><i class="fa-solid fa-border-all"></i> Dashboard</li>
+                <li><i class="fa-solid fa-chart-line"></i> Monitoring Sensor</li>
+                <li><i class="fa-solid fa-recycle"></i> Proses Kompos</li>
+                <li><i class="fa-solid fa-clock-rotate-left"></i> Riwayat Data</li>
+                <li><i class="fa-solid fa-gear"></i> Pengaturan</li>
+            </ul>
+        </aside>
+
+        <!-- KONTEN UTAMA KANAN -->
+        <main class="main-content">
+            
+            <!-- Top Bar -->
+            <div class="top-bar">
+                <div class="title-area">
+                    <span class="breadcrumb">IOT MONITORING / OVERVIEW</span>
+                    <h1>Dashboard Smart Eco Compost</h1>
+                    <p>Pantau kondisi dan perkembangan proses pengomposan secara langsung.</p>
+                </div>
+                <div class="status-badge">
+                    <span class="dot"></span> ESP32 Terhubung • Demo
+                </div>
+            </div>
+
+            <!-- Kartu Sensor -->
+            <section class="cards-container">
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-temperature-half" style="color: #e53e3e;"></i></div>
+                    <div class="card-info">
+                        <h3>32.4 °C</h3>
+                        <p>Suhu kompos</p>
+                        <span class="sub-text">Dalam rentang aman</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-droplet" style="color: #3182ce;"></i></div>
+                    <div class="card-info">
+                        <h3>58 %</h3>
+                        <p>Kelembapan bahan</p>
+                        <span class="sub-text">Sensor soil moisture</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-flask" style="color: #d69e2e;"></i></div>
+                    <div class="card-info">
+                        <h3>6.8</h3>
+                        <p>Nilai pH</p>
+                        <span class="sub-text">Pembacaan terakhir</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-arrows-spin" style="color: #38a169;"></i></div>
+                    <div class="card-info">
+                        <h3>72 %</h3>
+                        <p>Progres kompos</p>
+                        <span class="sub-text">Estimasi demo</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Baris Grafik & Kondisi -->
+            <div class="middle-row">
+                <!-- Kolom Kiri: Grafik Tren -->
+                <div class="panel chart-panel">
+                    <h3>Tren kondisi kompos</h3>
+                    <p class="sub-text">Contoh pembacaan suhu dan kelembapan</p>
+                    <!-- Placeholder untuk Grafik -->
+                    <div class="chart-placeholder">
+                        <div class="bar" style="height: 40%;"></div>
+                        <div class="bar" style="height: 60%;"></div>
+                        <div class="bar" style="height: 50%;"></div>
+                        <div class="bar" style="height: 70%;"></div>
+                        <div class="bar" style="height: 45%;"></div>
+                        <div class="bar active" style="height: 80%;"></div>
+                        <div class="bar" style="height: 65%;"></div>
+                    </div>
+                    <div class="chart-labels">
+                        <span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span><span>Min</span>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Kondisi -->
+                <div class="panel condition-panel">
+                    <h3>Kondisi pengomposan</h3>
+                    <p class="sub-text">Ringkasan pembacaan sensor</p>
+                    <div class="donut-container">
+                        <div class="donut-chart">
+                            <span>72%</span>
+                            <small>PROGRES</small>
+                        </div>
+                        <div class="condition-text">
+                            <h4>Proses berjalan</h4>
+                            <p>Parameter sensor masih berproses. Sebaiknya lanjutkan pemantauan rutin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Baris Tabel & Tahapan -->
+            <div class="bottom-row">
+                <!-- Tahapan Pengomposan -->
+                <div class="panel timeline-panel">
+                    <h3>Tahapan pengomposan</h3>
+                    <p class="sub-text">Contoh alur proses bahan organik</p>
+                    <div class="timeline">
+                        <div class="step active"><span class="num">01</span><p>Pengumpulan</p></div>
+                        <div class="step active"><span class="num">02</span><p>Pencacahan</p></div>
+                        <div class="step active"><span class="num">03</span><p>Pengomposan</p></div>
+                        <div class="step"><span class="num">04</span><p>Pematangan</p></div>
+                    </div>
+                </div>
+
+                <!-- Tabel Riwayat -->
+                <div class="panel table-panel">
+                    <h3>Riwayat pembacaan</h3>
+                    <p class="sub-text">Data contoh untuk rancangan awal</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>WAKTU</th>
+                                <th>PARAMETER</th>
+                                <th>NILAI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>10:15</td><td>Suhu</td><td>32.4 °C</td></tr>
+                            <tr><td>10:15</td><td>Kelembapan</td><td>58 %</td></tr>
+                            <tr><td>10:15</td><td>pH</td><td>6.8</td></tr>
+                            <tr><td>10:10</td><td>Suhu</td><td>32.1 °C</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
